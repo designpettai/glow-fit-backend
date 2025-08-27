@@ -13,8 +13,8 @@ app.post("/api/send-email", async (req, res) => {
   try {
     const { mobileNumber, appointmentDate, timeSlot, reasonForVisit, email, branch } = req.body;
 
-    const yourEmail = "gsaravanakumar1101@gmail.com";
-    const appPassword = "vxox gmin udic vesi";
+    const yourEmail = " glowfitclinic@gmail.com ";
+    const appPassword = "wfmb uvqu xgkw rfpg";
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
