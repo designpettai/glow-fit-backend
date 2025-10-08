@@ -13,9 +13,9 @@ app.post("/api/send-email", async (req, res) => {
   try {
     const { mobileNumber, appointmentDate, timeSlot, reasonForVisit, email, branch } = req.body;
 
-    const yourEmail = "glowfitclinic@gmail.com";
+    const yourEmail = " glowfitclinic@gmail.com ";
     const appPassword = "wfmb uvqu xgkw rfpg";
-    
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -25,7 +25,7 @@ app.post("/api/send-email", async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"${email}" <${yourEmail}>`,  
+      from: `"${email}" <${yourEmail}>`,  // ✅ safer: shows user email, but sends via your Gmail
       to: yourEmail,
       subject: "New Appointment Booking",
       html: `
